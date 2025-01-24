@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    maven { url "https://repo.osgeo.org/repository/release/" }
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+javadoc {
+    enabled = false
+}
+
+test {
+    useJUnitPlatform {
+        includeTags 'release'
+    }
+}
