@@ -1,0 +1,25 @@
+{
+  "pipeline": [
+    {
+      "type": "readers.las",
+      "filename": "/Users/victo/Documents/GitHub/3dtiles-conversion/input/Laser Scan_2024.laz",
+      "compression": "laszip"
+    },
+    {
+      "type": "filters.reprojection",
+      "in_srs": "ESRI:103140",
+      "out_srs": "EPSG:3857"
+    },
+    {
+      "type": "filters.python",
+      "script": "/Users/victo/Documents/GitHub/3dtiles-conversion/pdal/from_feet_to_meters.py",
+      "function": "from_feet_to_meters",
+      "module": "feet_to_meters"
+    },
+    {
+      "type": "writers.las",
+      "filename": "/Users/victo/Documents/GitHub/3dtiles-conversion/input/Laser_Scan_2024_3857_z_meters.las",
+      "compression": "laszip"
+    }
+  ]
+}
