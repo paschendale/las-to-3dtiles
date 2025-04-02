@@ -34,4 +34,4 @@ jobs:
           push: true
           tags: |
             paschendale/las-to-3dtiles:latest
-            paschendale/:sha-${{ steps.commit.outputs.COMMIT_HASH }}
+            paschendale/sha-${{ steps.commit.outputs.COMMIT_HASH }}
