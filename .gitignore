@@ -1,2 +1,5 @@
 /output/*
 /input/*
+node_modules
+venv
+pipelines
