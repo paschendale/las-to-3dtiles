@@ -18,6 +18,8 @@ jobs:
 
       - name: 💸 Semantic Release
         uses: cycjimmy/semantic-release-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
 
       - name: 🛠 Set Environment Variables
         id: release
